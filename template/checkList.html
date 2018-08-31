@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<p> Similar Article</p>
+<ul>
+    {% for item in list %}
+    <li>{{ item[0] }}
+        <br/>
+        Similarity: <b style="color: red">{{ item[1] }}</b></li>
+    {% end %}
+</ul>
+
+
+</body>
+</html>

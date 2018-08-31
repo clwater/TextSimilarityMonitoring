@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-import abstract
+import abstract, cosine
 
 def cleanAbsCache():
     print('clean abstract cache')
@@ -19,6 +19,7 @@ def initWorld():
     filelist = os.listdir('./paper')
     # print filelist[0]
     for file in filelist:
-        abstract.getAbs(os.path.abspath('./paper/' + file))
+        abstract.getAbsFile(os.path.abspath('./paper/' + file))
 
+    cosine.buildDictionary()
 

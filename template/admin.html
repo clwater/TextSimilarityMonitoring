@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+
+
+<b>File List</b>
+
+<form action="upFile" method="post" enctype="multipart/form-data">
+    <input type="file" name="upfile">
+    <input type="submit">
+</form>
+
+<ul>
+    {% for item in baseFile %}
+    <li><p> {{ item }} </p></li>
+    {% end %}
+</ul>
+
+
+</body>
+</html>
